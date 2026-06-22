@@ -1,21 +1,19 @@
-prompt("Digite o número do pokémon")
-var npoke = "2"
+ var npoke = prompt("Digite o número do pokémon")
 npoke = Number.parseInt(npoke)
 
-switch (npoke) {
-    case 1:
-        console.log("Bulbasaur")
-        break
-    case 2: 7
-    console.log("ivysaur")
-    break
-    case 3:
-        console.log("venossaur")
-        break
+function buscarpokemon(npoke) {
+    switch (npoke) {
+        case 1:
+            return "Bulbasaur"
+        case 2:
+            return "Ivysaur"
+        case 3:
+            return "Venossaur"
         case 4:
-            console.log("Charmander")
-            break
-            default:
-
-                console.log("Pokemon não encontrado")
+            return "Charmander"
+        default:
+            return "Pokémon não encontrado"
+    }
 }
+
+console.log(buscarpokemon(npoke))
