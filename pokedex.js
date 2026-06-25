@@ -1,6 +1,11 @@
- var npoke = prompt("Digite o número do pokémon")
-npoke = Number.parseInt(npoke)
+function buscar(){
+    
+    var poke = document.querySelector("#npokem")
+    var pokem = Number.parseInt(poke.value)
+    console.log(buscarpokemon(pokem))
 
+
+}
 function buscarpokemon(npoke) {
     switch (npoke) {
         case 1:
@@ -16,4 +21,4 @@ function buscarpokemon(npoke) {
     }
 }
 
-console.log(buscarpokemon(npoke))
+
