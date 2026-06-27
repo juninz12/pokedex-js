@@ -2,6 +2,8 @@ function buscar(){
     
     var poke = document.querySelector("#npokem")
     var pokem = Number.parseInt(poke.value)
+    var respoke = document.querySelector("#rpoke")
+    respoke.innerHTML = (buscarpokemon(pokem))
     console.log(buscarpokemon(pokem))
 
 
