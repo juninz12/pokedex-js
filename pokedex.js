@@ -9,18 +9,10 @@ function buscar(){
 
 }
 function buscarpokemon(npoke) {
-    switch (npoke) {
-        case 1:
-            return "Bulbasaur"
-        case 2:
-            return "Ivysaur"
-        case 3:
-            return "Venossaur"
-        case 4:
-            return "Charmander"
-        default:
-            return "Pokémon não encontrado"
-    }
+   var pokemons = ["Bulbasaur","Ivysaur","Venossaur","Charmander"];
+   if(npoke <1 || npoke>4){
+   return("Pokémon não encontrado")
+ }
+  return pokemons [npoke-1]
 }
-
-
+ 
