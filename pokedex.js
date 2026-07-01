@@ -154,12 +154,26 @@
 
 
 function buscar() {
+
+ 
   var poke = document.querySelector("#npokem")
-  var pokem = Number.parseInt(poke.value)
+  var poketransform = Number.parseInt(poke.value)
   var respoke = document.querySelector("#rpoke")
-  respoke.innerHTML = buscarpokemon(pokem)
-  console.log(buscarpokemon(pokem))
-}
+  var resultado =""
+  
+  if(isNaN(poketransform)){
+    resultado = buscarPorNome(poke.value)
+    respoke.innerHTML = resultado
+   
+  }
+  else{
+    
+     resultado = buscarpokemon(poketransform)
+     respoke.innerHTML = resultado
+  }
+
+  }
+
 
 function buscarpokemon(npoke) {
   
@@ -179,4 +193,13 @@ function listarPokemons() {
     }
 
     respoke.innerHTML = listaTexto;
+}  
+function buscarPorNome(pokenome) {
+  for (let i = 0; i < pokemons.length; i++) {
+    if (pokemons[i].toLowerCase() === pokenome.toLowerCase().trim()) {
+      return pokemons[i];
+    }
+  }
+  return "Pokémon não encontrado";
+
 }
