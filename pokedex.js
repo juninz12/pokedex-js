@@ -157,18 +157,19 @@ function buscar() {
 
  
   var poke = document.querySelector("#npokem")
-  var poketransform = Number.parseInt(poke.value)
+  var pokeNumero = Number.parseInt(poke.value)
   var respoke = document.querySelector("#rpoke")
   var resultado =""
   
-  if(isNaN(poketransform)){
+  if(isNaN(pokeNumero)){
     resultado = buscarPorNome(poke.value)
     respoke.innerHTML = resultado
    
   }
   else{
     
-     resultado = buscarpokemon(poketransform)
+    
+     resultado = buscarpokemon(pokeNumero)
      respoke.innerHTML = resultado
   }
 
@@ -203,3 +204,10 @@ function buscarPorNome(pokenome) {
   return "Pokémon não encontrado";
 
 }
+  var input = document.querySelector("#npokem");
+  input.addEventListener("keydown", function(evento) {
+    if(evento.key ==="Enter"){
+    buscar()
+    }
+
+  })
