@@ -1,4 +1,4 @@
-  var pokemons = [
+var pokemons = [
   "Bulbasaur",
   "Ivysaur",
   "Venusaur",
@@ -149,52 +149,41 @@
   "Dragonair",
   "Dragonite",
   "Mewtwo",
-  "Mew"
-  ]
-
+  "Mew",
+];
 
 function buscar() {
+  var poke = document.querySelector("#npokem");
+  var pokeNumero = Number.parseInt(poke.value);
+  var respoke = document.querySelector("#rpoke");
+  var resultado = "";
 
- 
-  var poke = document.querySelector("#npokem")
-  var pokeNumero = Number.parseInt(poke.value)
-  var respoke = document.querySelector("#rpoke")
-  var resultado =""
-  
-  if(isNaN(pokeNumero)){
-    resultado = buscarPorNome(poke.value)
-    respoke.innerHTML = resultado
-   
+  if (isNaN(pokeNumero)) {
+    resultado = buscarPorNome(poke.value);
+    respoke.innerHTML = resultado;
+  } else {
+    resultado = buscarpokemon(pokeNumero);
+    respoke.innerHTML = resultado;
   }
-  else{
-    
-    
-     resultado = buscarpokemon(pokeNumero)
-     respoke.innerHTML = resultado
-  }
-
-  }
-
+}
 
 function buscarpokemon(npoke) {
-  
-
   if (npoke < 1 || npoke > pokemons.length) {
-    return "Pokémon não encontrado"
+    return "Pokémon não encontrado";
   }
-  return pokemons[npoke - 1]
+  return pokemons[npoke - 1];
 }
 
 function listarPokemons() {
-    var listaTexto = "";
-    var respoke = document.querySelector("#rpoke");
+  var listaTexto = "";
+  var respoke = document.querySelector("#rpoke");
 
-    for (let i = 0; i < pokemons.length; i++) {
-        listaTexto += `${pokemons[i]}<br>`;
-    }
+  for (let i = 0; i < pokemons.length; i++) {
+    listaTexto += `${pokemons[i]}<br>`;
+  }
 
-    respoke.innerHTML = listaTexto;
-}  
+  respoke.innerHTML = listaTexto;
+}
 function buscarPorNome(pokenome) {
   for (let i = 0; i < pokemons.length; i++) {
     if (pokemons[i].toLowerCase() === pokenome.toLowerCase().trim()) {
@@ -202,12 +191,10 @@ function buscarPorNome(pokenome) {
     }
   }
   return "Pokémon não encontrado";
-
 }
-  var input = document.querySelector("#npokem");
-  input.addEventListener("keydown", function(evento) {
-    if(evento.key ==="Enter"){
-    buscar()
-    }
-
-  })
+var input = document.querySelector("#npokem");
+input.addEventListener("keydown", function (evento) {
+  if (evento.key === "Enter") {
+    buscar();
+  }
+});
