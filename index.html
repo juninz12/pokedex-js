@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Pokedéx</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokedéx</title>
+  </head>
+  <body>
+    <header><h1>POKEDÉX</h1></header>
+    <main>
+      <form>
+        <input type="text" id="npokem" />
+        <input type="button" value="procurar" onclick="buscar()" />
+        <button onclick="listarPokemons(event)">Listar Pokémon</button>
+      </form>
 
-    <input type="button" value="procurar" onclick="buscar()"  >
-    <input type="text" id="npokem">
-    <button onclick="listarPokemons()">Listar Pokémon</button>
-    
-    <div id="rpoke"> </div>
+      <div id="rpoke"></div>
+    </main>
 
-    <script src= "pokedex.js"> </script>
-</body>
+    <script src="pokedex.js"></script>
+  </body>
 </html>
