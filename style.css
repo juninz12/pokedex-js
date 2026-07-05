@@ -1,10 +1,26 @@
 body {
-  background-color: #1a1a2e;
-  color: white;
+  background-color: #881717;
+  color: rgb(20, 21, 27);
   font-family: sans-serif;
   text-align: center;
 }
 h1 {
   font-size: 48px;
   letter-spacing: 4px;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  border-bottom: 4px solid #e2d40b;
+  padding-bottom: 12px;
+}
+input[type="text"] {
+  background-color: #f2f2f4;
+  border: 3px solid #820711;
+  border-radius: 9px;
+  color: rgb(37, 29, 30);
+  padding: 10px 12px;
+  font-size: 18px;
+}
+input[type="text"]:focus {
+  border-color: #f5c518;
 }

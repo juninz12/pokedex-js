@@ -181,20 +181,21 @@ function listarPokemons(evento) {
     listaTexto += `${pokemons[i].numero} ${pokemons[i].nome} ${pokemons[i].tipos}<br>`;
   }
   respoke.innerHTML = listaTexto;
-  function buscarPorNome(pokenome) {
-    for (let i = 0; i < pokemons.length; i++) {
-      if (pokemons[i].nome.toLowerCase() === pokenome.toLowerCase()) {
-        return `${pokemons[i].numero} ${pokemons[i].nome} ${pokemons[i].tipos}`;
-      }
-    }
-    return "Pokémon não encontrado";
-  }
-
-  var input = document.querySelector("#npokem");
-  input.addEventListener("keydown", function (evento) {
-    if (evento.key === "Enter") {
-      evento.preventDefault();
-      buscar();
-    }
-  });
 }
+
+function buscarPorNome(pokenome) {
+  for (let i = 0; i < pokemons.length; i++) {
+    if (pokemons[i].nome.toLowerCase() === pokenome.toLowerCase()) {
+      return `${pokemons[i].numero} ${pokemons[i].nome} ${pokemons[i].tipos}`;
+    }
+  }
+  return "Pokémon não encontrado";
+}
+
+var input = document.querySelector("#npokem");
+input.addEventListener("keydown", function (evento) {
+  if (evento.key === "Enter") {
+    evento.preventDefault();
+    buscar();
+  }
+});
