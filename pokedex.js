@@ -1,4 +1,4 @@
-var pokemons = [
+ let pokemons = [
   { numero: 1, nome: "Bulbasaur", tipos: ["Grama", "Veneno"] },
   { numero: 2, nome: "Ivysaur", tipos: ["Grama", "Veneno"] },
   { numero: 3, nome: "Venusaur", tipos: ["Grama", "Veneno"] },
@@ -25,14 +25,14 @@ var pokemons = [
   { numero: 24, nome: "Arbok", tipos: ["Veneno"] },
   { numero: 25, nome: "Pikachu", tipos: ["Elétrico"] },
   { numero: 26, nome: "Raichu", tipos: ["Elétrico"] },
-  { numero: 27, nome: "Sandshrew", tipos: ["Terra"] },
-  { numero: 28, nome: "Sandslash", tipos: ["Terra"] },
+  { numero: 27, nome: "Sandshrew", tipos: ["Terrestre"] },
+  { numero: 28, nome: "Sandslash", tipos: ["Terrestre"] },
   { numero: 29, nome: "Nidoran♀", tipos: ["Veneno"] },
   { numero: 30, nome: "Nidorina", tipos: ["Veneno"] },
-  { numero: 31, nome: "Nidoqueen", tipos: ["Veneno", "Terra"] },
+  { numero: 31, nome: "Nidoqueen", tipos: ["Veneno", "Terrestre"] },
   { numero: 32, nome: "Nidoran♂", tipos: ["Veneno"] },
   { numero: 33, nome: "Nidorino", tipos: ["Veneno"] },
-  { numero: 34, nome: "Nidoking", tipos: ["Veneno", "Terra"] },
+  { numero: 34, nome: "Nidoking", tipos: ["Veneno", "Terrestre"] },
   { numero: 35, nome: "Clefairy", tipos: ["Fada"] },
   { numero: 36, nome: "Clefable", tipos: ["Fada"] },
   { numero: 37, nome: "Vulpix", tipos: ["Fogo"] },
@@ -48,8 +48,8 @@ var pokemons = [
   { numero: 47, nome: "Parasect", tipos: ["Inseto", "Grama"] },
   { numero: 48, nome: "Venonat", tipos: ["Inseto", "Veneno"] },
   { numero: 49, nome: "Venomoth", tipos: ["Inseto", "Veneno"] },
-  { numero: 50, nome: "Diglett", tipos: ["Terra"] },
-  { numero: 51, nome: "Dugtrio", tipos: ["Terra"] },
+  { numero: 50, nome: "Diglett", tipos: ["Terrestre"] },
+  { numero: 51, nome: "Dugtrio", tipos: ["Terrestre"] },
   { numero: 52, nome: "Meowth", tipos: ["Normal"] },
   { numero: 53, nome: "Persian", tipos: ["Normal"] },
   { numero: 54, nome: "Psyduck", tipos: ["Água"] },
@@ -72,9 +72,9 @@ var pokemons = [
   { numero: 71, nome: "Victreebel", tipos: ["Grama", "Veneno"] },
   { numero: 72, nome: "Tentacool", tipos: ["Água", "Veneno"] },
   { numero: 73, nome: "Tentacruel", tipos: ["Água", "Veneno"] },
-  { numero: 74, nome: "Geodude", tipos: ["Pedra", "Terra"] },
-  { numero: 75, nome: "Graveler", tipos: ["Pedra", "Terra"] },
-  { numero: 76, nome: "Golem", tipos: ["Pedra", "Terra"] },
+  { numero: 74, nome: "Geodude", tipos: ["Pedra", "Terrestre"] },
+  { numero: 75, nome: "Graveler", tipos: ["Pedra", "Terrestre"] },
+  { numero: 76, nome: "Golem", tipos: ["Pedra", "Terrestre"] },
   { numero: 77, nome: "Ponyta", tipos: ["Fogo"] },
   { numero: 78, nome: "Rapidash", tipos: ["Fogo"] },
   { numero: 79, nome: "Slowpoke", tipos: ["Água", "Psíquico"] },
@@ -93,7 +93,7 @@ var pokemons = [
   { numero: 92, nome: "Gastly", tipos: ["Fantasma", "Veneno"] },
   { numero: 93, nome: "Haunter", tipos: ["Fantasma", "Veneno"] },
   { numero: 94, nome: "Gengar", tipos: ["Fantasma", "Veneno"] },
-  { numero: 95, nome: "Onix", tipos: ["Pedra", "Terra"] },
+  { numero: 95, nome: "Onix", tipos: ["Pedra", "Terrestre"] },
   { numero: 96, nome: "Drowzee", tipos: ["Psíquico"] },
   { numero: 97, nome: "Hypno", tipos: ["Psíquico"] },
   { numero: 98, nome: "Krabby", tipos: ["Água"] },
@@ -102,15 +102,15 @@ var pokemons = [
   { numero: 101, nome: "Electrode", tipos: ["Elétrico"] },
   { numero: 102, nome: "Exeggcute", tipos: ["Grama", "Psíquico"] },
   { numero: 103, nome: "Exeggutor", tipos: ["Grama", "Psíquico"] },
-  { numero: 104, nome: "Cubone", tipos: ["Terra"] },
-  { numero: 105, nome: "Marowak", tipos: ["Terra"] },
+  { numero: 104, nome: "Cubone", tipos: ["Terrestre"] },
+  { numero: 105, nome: "Marowak", tipos: ["Terrestre"] },
   { numero: 106, nome: "Hitmonlee", tipos: ["Lutador"] },
   { numero: 107, nome: "Hitmonchan", tipos: ["Lutador"] },
   { numero: 108, nome: "Lickitung", tipos: ["Normal"] },
   { numero: 109, nome: "Koffing", tipos: ["Veneno"] },
   { numero: 110, nome: "Weezing", tipos: ["Veneno"] },
-  { numero: 111, nome: "Rhyhorn", tipos: ["Terra", "Pedra"] },
-  { numero: 112, nome: "Rhydon", tipos: ["Terra", "Pedra"] },
+  { numero: 111, nome: "Rhyhorn", tipos: ["Terrestre", "Pedra"] },
+  { numero: 112, nome: "Rhydon", tipos: ["Terrestre", "Pedra"] },
   { numero: 113, nome: "Chansey", tipos: ["Normal"] },
   { numero: 114, nome: "Tangela", tipos: ["Grama"] },
   { numero: 115, nome: "Kangaskhan", tipos: ["Normal"] },
@@ -152,10 +152,10 @@ var pokemons = [
   { numero: 151, nome: "Mew", tipos: ["Psíquico"] },
 ];
 function buscar() {
-  var poke = document.querySelector("#npokem");
-  var pokeNumero = Number.parseInt(poke.value);
-  var respoke = document.querySelector("#rpoke");
-  var resultado = "";
+ const poke = document.querySelector("#npokem");
+  let pokeNumero = Number.parseInt(poke.value);
+  const respoke = document.querySelector("#rpoke");
+  let resultado = "";
 
   if (isNaN(pokeNumero)) {
     resultado = buscarPorNome(poke.value);
@@ -174,8 +174,8 @@ function buscarpokemon(npoke) {
 }
 
 function listarPokemons(evento) {
-  var listaTexto = "";
-  var respoke = document.querySelector("#rpoke");
+  let listaTexto = "";
+  let respoke = document.querySelector("#rpoke");
   evento.preventDefault();
   for (let i = 0; i < pokemons.length; i++) {
     listaTexto += `${pokemons[i].numero} ${pokemons[i].nome} ${pokemons[i].tipos}<br>`;
@@ -192,10 +192,16 @@ function buscarPorNome(pokenome) {
   return "Pokémon não encontrado";
 }
 
-var input = document.querySelector("#npokem");
+const input = document.querySelector("#npokem");
 input.addEventListener("keydown", function (evento) {
   if (evento.key === "Enter") {
     evento.preventDefault();
     buscar();
   }
 });
+
+let badges = ""
+  for (let i = 0; i < tipos.length; i++){
+      badges += `<span class >= "badge ${tipos[i]}">${tipos[i]}</span>`
+  }
+

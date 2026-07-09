@@ -1,18 +1,19 @@
 body {
-  background-color: #881717;
+  background-color: #6f1a1a;
   color: rgb(20, 21, 27);
   font-family: sans-serif;
   text-align: center;
 }
+
 h1 {
   font-size: 48px;
   letter-spacing: 4px;
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
-  font-style: normal;
   border-bottom: 4px solid #e2d40b;
   padding-bottom: 12px;
 }
+
 input[type="text"] {
   background-color: #f2f2f4;
   border: 3px solid #820711;
@@ -21,6 +22,23 @@ input[type="text"] {
   padding: 10px 12px;
   font-size: 18px;
 }
+
 input[type="text"]:focus {
   border-color: #f5c518;
+}
+
+button,
+input[type="button"] {
+  background-color: #001f3f;
+  color: rgb(243, 243, 243);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="button"]:hover {
+  background-color: #003366;
 }
